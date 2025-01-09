@@ -1,0 +1,30 @@
+Nil? Test:       PASS
+Symbol? Test:    PASS
+Number? Test:    PASS
+List? Test:      PASS
+Cons Test:       PASS
+Car Test:        PASS
+Cdr Test:        PASS
+Add Test:        PASS
+Sub Test:        PASS
+Div Test:        PASS
+Mul Test:        PASS
+Eq Fail Test:    PASS
+Eq Test:         PASS
+Nest Test:       PASS
+LTE Test:        PASS
+GT Test:         PASS
+Set Test:        PASS
+Quote Test:      PASS
+And Test:        PASS
+Or Test:         PASS
+IfTrue Test:     PASS
+IfFalse Test:    PASS
+Cond Test:       PASS
+FizzBuzz:        PASS
+UserFunc Test:   PASS
+Fib Test:        PASS
+Factorial Test:  PASS
+[line: 1] Error at end: Expect a closing ')' for lists.
+ParseError Test:         PASS
+RuntimeError Test:       PASS

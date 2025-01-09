@@ -1,0 +1,15 @@
+> (add 1 2)
+3
+> (set x 5)
+5
+> x
+5
+> (mul x x)
+25
+> (gte x 10)
+()
+> (cond ((gt x 3) T) (T (div 10 x)))               
+T
+> (add 5 9
+[line: 1] Error at end: Expect a closing ')' for lists.
+> %                                      

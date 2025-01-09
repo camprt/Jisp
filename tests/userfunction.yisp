@@ -1,0 +1,10 @@
+(define say (a) a)
+(say "hello!")
+
+(define list4 (a b c d) (
+                        cons a (cons b (cons c (cons d ())))
+))
+(list4 1 2 3 4)
+
+(define square (x) (mul x x))
+(square 7)

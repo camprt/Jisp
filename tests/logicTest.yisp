@@ -1,0 +1,5 @@
+(and T ())
+(or T ())
+(if T 1)
+(if (eq 1 2) 2 3)
+(cond ((eq 1 2) 2) ((eq 1 1) T))

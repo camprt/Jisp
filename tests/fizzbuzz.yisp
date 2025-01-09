@@ -1,0 +1,17 @@
+(define main () (fizzbuzz 10 ()) )
+
+(define fizzbuzz (n list) (cond 
+                                ((eq n 0) list)
+                                (T (fizzbuzz (sub n 1) (cons (check n) list) ) )
+                           )
+)
+
+(define check (n) (cond
+                    ((eq 0 (mod n 15)) "fizzbuzz")
+                    ((eq 0 (mod n 3)) "fizz")
+                    ((eq 0 (mod n 5)) "buzz")
+                    (T "")
+                  )
+)
+
+(main)

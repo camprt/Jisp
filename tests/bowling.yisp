@@ -1,0 +1,31 @@
+(define strike? (balls) (eq (car balls) 10))
+
+(define spare? (balls) (eq (add (car balls) (car(cdr balls))) 10) )
+
+(define open? (balls) (not (or (strike? balls) (spare? balls) )) )
+
+(define doStrike (balls) (add 10 (add (car(cdr balls)) (car(cdr(cdr balls))) )))
+
+(define doSpare (balls) (add 10 (car(cdr balls))) )
+
+(define bowling (balls) (bowlhelp 1 balls 0))
+
+(define bowlhelp (frame balls total) (cond
+                                        ((eq 10 frame) (score balls))
+                                        (T (bowlhelp (add frame 1)
+                                                    (if (strike? balls) (cdr balls) (cdr(cdr balls)))
+                                                    (add (score balls) total)
+                                        ))
+                                     )
+)
+
+(define score (balls) (cond
+                        ((strike? balls) (doStrike balls))
+                        ((spare? balls) (doSpare balls))
+                        (T (add (car balls) (car(cdr balls)) ))
+                      )
+)
+
+(set balls (10 10 9 0 8 2 5 5 7 3 8 2 9 0 10 10 10 8))
+
+(bowling balls)
